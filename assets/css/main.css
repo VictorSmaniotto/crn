@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root{
+    --font-principal: 'Poppins', sans-serif;
+    --cor-laranja-principal: #f7941d;
+    --cor-azul-principal: #0e6094;
+    --cor-linhas: #ff7f00;
+}
+
+/* ***************** Pagina Projetos***************** */
+/* Formulario de pesquisa */
+
+.search-bar input{
+    border-radius: 15px;
+    border: 0.15rem #0e6094 solid;
+    width: 25rem !important;
+    height: 2.5rem;
+    padding-left: 10px;
+}
+
+.search-bar button{
+    border: none;
+    margin-left: -3rem;
+    background-color: #fff;
+}
+
+/* Modelo de Card Horizontal */
+
+
+.card-horizontal .card-imagem img{
+    /* border-radius: 10px; */
+    object-fit: fill;
+}
+
+
+.card-lista{
+   margin-left: -30px;
+}
+
+.card-lista .lista-item{
+    display: block;
+    font-weight: 600;
+}
+
+.card-lista .lista-sub-item{
+    display: block;
+}
+
+.lista-item-membro{
+    list-style: none;
+    display: inline-block;
+}
+
+.lista-item-membro img{
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+.membro1{
+    margin-left: -30px;
+}
+
