@@ -9,22 +9,26 @@
 /* ***************** Pagina Projetos***************** */
 /* Formulario de pesquisa */
 
-.search-bar input{
+/* .search-bar input{
     border-radius: 15px;
     border: 0.15rem #0e6094 solid;
     width: 25rem !important;
     height: 2.5rem;
     padding-left: 10px;
-}
+} */
 
 .search-bar button{
     border: none;
     margin-left: -3rem;
     background-color: #fff;
+    display: none;
 }
 
 /* Modelo de Card Horizontal */
 
+.card-horizontal .card-corpo{
+    /* max-height: 500px; */
+}
 
 .card-horizontal .card-imagem img{
     /* border-radius: 10px; */
@@ -59,3 +63,30 @@
     margin-left: -30px;
 }
 
+/* Modelo de Card Horizontal */
+
+.card-vertical .card-lista{
+    text-align: start;
+}
+
+.card-vertical .card-lista .lista-item{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.card-vertical .card-lista .lista-sub-item{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.card-vertical .card-lista .lista-sub-item{
+    display: inline-block;
+}
+
+/* .card-lista .sub-lista{
+    
+} */
+
+.card-lista-membros{
+    text-align: start;
+}
