@@ -1,7 +1,7 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/controller/ProjetoController.php';
-$projeto = visualizar($_GET['ID']);
+$projeto = visualizar($_GET['id']);
 
 
 
@@ -35,14 +35,18 @@ include_once CABECALHO;
         <tr>
             <th width="100">Status</th>
             <td>
-                <?=$plano['status']?>
+                <?php if ($projeto['status'] == 1) {
+                    echo "Em Andamento";
+                }else{
+                    echo "Finalizado";
+                }?>
             </td>
         </tr>
     </table>
 
     <div class="row">
         <div class="col-12 p-3">
-            <a class="btn btn-primary" href="/projeto/editar?id=<?= $projeto['id'] ?>">Editar</a>
+            <a class="btn btn-primary" href="admin/projeto/editar?id=<?= $projeto['id'] ?>">Editar</a>
             <a class=" btn btn-light" href="index.php">Cancelar</a>
         </div>
     </div>

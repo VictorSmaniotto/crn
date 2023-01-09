@@ -11,11 +11,7 @@ function index(){
     $projeto = listarProjetos();
     return $projeto;
 }
-/**
- * Summary of visualizar
- * @param mixed $id
- * @return bool
- */
+
 function visualizar($id){
     $projeto = buscarProjeto($id);
     return $projeto;

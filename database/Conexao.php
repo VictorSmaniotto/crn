@@ -23,6 +23,6 @@ function conexao()
         return $conn;
     } catch (PDOException $e) {
         die($e->getMessage());
-        return null;
+        // return null;
     }
 }

@@ -2,7 +2,7 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/controller/ProjetoController.php';
 
-$projetos = index();
+ $projetos = (array)index();
 
 
 include_once CABECALHO;
@@ -38,13 +38,13 @@ include_once CABECALHO;
                         <!-- Linha do Registro -->
                         <?php foreach($projetos as $pro) : ?>
                         <tr>
-                            <th scope="row"><?= $pro['ID']?></th>
-                            <td><?= $pro['TITULO']?></td>
-                            <td><?=$pro['DESCRICAO']?> </td>
-                            <td><?=$pro['DTPUBLICACAO']?></td>
-                            <td><?=$pro['STATUS']?> </td>
+                            <th scope="row"><?= $pro['id']?></th>
+                            <td><?= $pro['titulo']?></td>
+                            <td><?=$pro['descricao']?> </td>
+                            <td><?=$pro['dtpublicacao']?></td>
+                            <td><?=$pro['status']?> </td>
                             <td class="text-center">
-                                <a class="btn btn-sm btn-light" href="visualizar.php">
+                                <a class="btn btn-sm btn-light" href="/admin/projeto/visualizar?id=<?=$pro['id']?>">
                                     <i class="fas fa-eye"></i>
                                 </a>
                                 <a class="btn btn-sm btn-primary" href="editar.php">
