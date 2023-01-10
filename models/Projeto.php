@@ -41,3 +41,27 @@ function buscarProjeto($id){
         die($e->getMessage());
     }
 }
+
+function CadastrarProjeto($projeto){
+    $db = conexao();
+
+    $sql = "INSERT INTO projeto (id, nome,descricao,titulo,subtitulo,dtinicio,dtfinal,dtultimaalteracao,status, idgrupo, idsubcategoria)
+                    VALUES(null, :nome, :descricao, :titulo, :subtitulo, curdate(), :dtfinal, curdate(), :status, idgrupo, idsubcategoria)";
+
+    try {
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':nome', $projeto['nome'], PDO::PARAM_STR);
+        $stmt->bindParam(':descricao', $projeto['descricao'], PDO::PARAM_STR);
+        $stmt->bindParam(':titulo', $projeto['titulo'], PDO::PARAM_STR);
+        $stmt->bindParam(':subtitulo', $projeto['subtitulo'], PDO::PARAM_STR);
+        $stmt->bindParam(':dtfinal', $projeto['dtfinal'], PDO::PARAM_STR);
+        $stmt->bindParam(':status', $projeto['status'], PDO::PARAM_INT);
+        $stmt->bindParam(':idgrupo', $projeto['idgrupo'], PDO::PARAM_INT);
+        $stmt->bindParam(':idsubcategoria', $projeto['idsubcategoria'], PDO::PARAM_INT);
+
+        return true;
+    } catch (\PDOException $e) {
+        die($e->getMessage());
+    }
+
+}

@@ -47,7 +47,7 @@ include_once CABECALHO;
                                 <a class="btn btn-sm btn-light" href="/admin/projeto/visualizar?id=<?=$pro['id']?>">
                                     <i class="fas fa-eye"></i>
                                 </a>
-                                <a class="btn btn-sm btn-primary" href="editar.php">
+                                <a class="btn btn-sm btn-primary" href="/admin/projeto/editar?id=<?=$pro['id']?>">
                                     <i class="fas fa-edit"></i>
                                 </a>
                                 <a class="btn btn-sm btn-danger" href="index.php">

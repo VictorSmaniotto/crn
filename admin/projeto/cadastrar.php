@@ -2,7 +2,7 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/controller/ProjetoController.php';
 
-
+$projetos = cadastrar();
 
 include_once CABECALHO;
 ?>
@@ -12,7 +12,7 @@ include_once CABECALHO;
 
         <h3 class="text-center m-4">Cadastrar Projeto</h3>
 
-        <form action="#" method="post" class="row g-3">
+        <form action="/admin/projeto/cadastrar.php" method="post" class="row g-3">
 
             <?php include_once '_formulario.php' ?>
 
