@@ -9,7 +9,7 @@ function conexao()
 {
 
     $host = "localhost";
-    $banco = "bdchronos";
+    $banco = "chronos";
     $usuario = "root";
     $senha = "";
 

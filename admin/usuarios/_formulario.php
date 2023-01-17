@@ -17,24 +17,24 @@
     <input type="text" name="cpf" id="cpf" class="form-control" value="<?=$usuarios['cpf'] ?? '' ?>" placeholder="Digite o CPF">
 </div>
 <div class="col-12">
-    <label for="ra">RA</label>
-    <input type="text" name="ra" id="ra" class="form-control" value="<?=$usuarios['ra'] ?? '' ?>" placeholder="Digite o RA">
+    <label for="ra_aluno">RA</label>
+    <input type="text" name="ra_aluno" id="ra_aluno" class="form-control" value="<?=$usuarios['ra_aluno'] ?? '' ?>" placeholder="Digite o RA">
 </div>
-<div class="col-12">
-    <label for="dtnascimento">Data da Nascimento</label>
-    <input type="date" name='dtnascimento' id="dtnascimento" class="form-control col-sm-4" value="<?=$usuarios['dtnascimento'] ?? '' ?>" placeholder="Insira a Data de Nascimento">
+<div class="col-4">
+    <label for="data_nascimento">Data da Nascimento</label>
+    <input type="date" name='data_nascimento' id="data_nascimento" class="form-control col-sm-4" value="<?=$usuarios['data_nascimento'] ?? '' ?>" placeholder="Insira a Data de Nascimento">
 </div>
 
-<div class="col-12">
-    <label for="nivel">Nível</label>
-    <select class="form-select" aria-label="Selecione o Nível" name="nivel" id="nivel">
-        <option value="<?=$usuarios['nivel'] ?? '' ?>" selected>Aluno</option>
+<div class="col-4">
+    <label for="tipo_usuario">Tipo</label>
+    <select class="form-select" aria-label="Selecione o Tipo" name="tipo_usuario" id="tipo_usuario">
+        <option value="<?=$usuarios['tipo_usuario'] ?? '' ?>" selected>Aluno</option>
         <option value="2">Professor</option>
         <option value="3">Gestor</option>
     </select>
 </div>
 
-<div class="col-12">
+<div class="col-4">
     <label for="situacao">Situação</label>
     <select class="form-select" aria-label="Selecione a Situação" name="situacao" id="situacao">
         <option value="<?=$usuarios['situacao'] ?? '' ?>" selected>Ativo</option>

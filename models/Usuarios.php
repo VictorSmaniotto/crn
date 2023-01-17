@@ -6,7 +6,7 @@ require_once BANCO_DE_DADOS;
 
 function listarUsuarios(){
     $db = conexao();
-    $sql = "SELECT * FROM usuario";
+    $sql = "SELECT * FROM usuarios";
 
     try{
         $stmt = $db->prepare($sql);
@@ -21,7 +21,7 @@ function listarUsuarios(){
 
 function buscarUsuario($id){
     $db = conexao();
-    $sql = "SELECT * FROM usuario WHERE id=:id";
+    $sql = "SELECT * FROM usuarios WHERE id=:id";
     
     try {
         $stmt = $db->prepare($sql);
@@ -37,8 +37,8 @@ function buscarUsuario($id){
 
 function cadastrarUsuario($usuario){
     $db = conexao();
-    $sql = "INSERT INTO usuario (id, nome, email, senha, cpf, ra, dtnascimento, dtcadastro, nivel, situacao)
-                        VALUES(null,:nome, :email, :senha, :cpf, :ra, :dtnascimento, curdate(), :nivel, :situacao)";
+    $sql = "INSERT INTO usuarios (id, nome, email, senha, cpf, ra_aluno, data_nascimento, data_cadastro, tipo_usuario, situacao)
+                        VALUES(null,:nome, :email, :senha, :cpf, :ra_aluno, :data_nascimento, curdate(), :tipo_usuario, :situacao)";
 
     // $current_date = date("Y-m-d"); 
 
@@ -48,10 +48,10 @@ function cadastrarUsuario($usuario){
         $stmt->bindParam(':email', $usuario['email'], PDO::PARAM_STR);
         $stmt->bindParam(':senha', $usuario['senha'], PDO::PARAM_STR);
         $stmt->bindParam(':cpf', $usuario['cpf'], PDO::PARAM_STR);
-        $stmt->bindParam(':ra', $usuario['ra'], PDO::PARAM_STR);
-        $stmt->bindParam('dtnascimento', $usuario['dtnascimento'], PDO::PARAM_STR);
-        $stmt->bindParam(':nivel', $usuario['nivel'], PDO::PARAM_INT);
-        $stmt->bindParam(':situacao', $usuario['situacao'], PDO::PARAM_INT);
+        $stmt->bindParam(':ra_aluno', $usuario['ra_aluno'], PDO::PARAM_STR);
+        $stmt->bindParam(':data_nascimento', $usuario['data_nascimento'], PDO::PARAM_STR);
+        $stmt->bindParam(':tipo_usuario', $usuario['tipo_usuario'], PDO::PARAM_STR);
+        $stmt->bindParam(':situacao', $usuario['situacao'], PDO::PARAM_STR);
         $stmt->execute();
 
         return true;
@@ -64,14 +64,14 @@ function cadastrarUsuario($usuario){
 function editarUsuario($usuario, $id){
     $db = conexao();
 
-    $sql = "UPDATE usuario SET
+    $sql = "UPDATE usuarios SET
                                 nome=:nome,
                                 email=:email,
                                 senha=:senha,
                                 cpf=:cpf,
-                                ra=:ra,
-                                dtnascimento=:dtnascimento,
-                                nivel=:nivel,
+                                ra_aluno=:ra_aluno,
+                                data_nascimento=:data_nascimento,
+                                tipo_usuario=:tipo_usuario,
                                 situacao=:situacao
                             WHERE id=:id";
 
@@ -81,10 +81,10 @@ function editarUsuario($usuario, $id){
         $stmt->bindParam(':email', $usuario['email'], PDO::PARAM_STR);
         $stmt->bindParam(':senha', $usuario['senha'], PDO::PARAM_STR);
         $stmt->bindParam(':cpf', $usuario['cpf'], PDO::PARAM_STR);
-        $stmt->bindParam(':ra', $usuario['ra'], PDO::PARAM_STR);
-        $stmt->bindParam('dtnascimento', $usuario['dtnascimento'], PDO::PARAM_STR);
-        $stmt->bindParam(':nivel', $usuario['nivel'], PDO::PARAM_INT);
-        $stmt->bindParam(':situacao', $usuario['situacao'], PDO::PARAM_INT);
+        $stmt->bindParam(':ra_aluno', $usuario['ra_aluno'], PDO::PARAM_STR);
+        $stmt->bindParam(':data_nascimento', $usuario['data_nascimento'], PDO::PARAM_STR);
+        $stmt->bindParam(':tipo_usuario', $usuario['tipo_usuario'], PDO::PARAM_STR);
+        $stmt->bindParam(':situacao', $usuario['situacao'], PDO::PARAM_STR);
         $stmt->bindParam(":id", $id, PDO::PARAM_INT);
         $stmt->execute();
 
@@ -99,7 +99,7 @@ function editarUsuario($usuario, $id){
 function deletarUsuario($id){
     $db = conexao();
 
-    $sql = "DELETE FROM usuario WHERE id=:id";
+    $sql = "DELETE FROM usuarios WHERE id=:id";
 
     try{
         $stmt = $db->prepare($sql);

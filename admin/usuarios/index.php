@@ -46,7 +46,7 @@ include_once CABECALHO;
                             <td><?= $user['nome']?></td>
                             <td><?=$user['email']?> </td>
                             <td><?=$user['cpf']?></td>
-                            <td><?=$user['ra']?> </td>
+                            <td><?=$user['ra_aluno']?> </td>
                             <td class="text-center">
                                 <a class="btn btn-sm btn-light" href="/admin/usuarios/visualizar?id=<?=$user['id']?>">
                                     <i class="fas fa-eye"></i>

@@ -23,9 +23,9 @@ function cadastrar(){
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
             'cpf' => $_POST['cpf'],
-            'ra' => $_POST['ra'],
-            'dtnascimento' => $_POST['dtnascimento'],
-            'nivel' => $_POST['nivel'],
+            'ra_aluno' => $_POST['ra_aluno'],
+            'data_nascimento' => $_POST['data_nascimento'],
+            'tipo_usuario' => $_POST['tipo_usuario'],
             'situacao' => $_POST['situacao']
         ];
 
@@ -46,9 +46,9 @@ function editar($id){
             'email'=>$_POST['email'],
             'senha'=>$_POST['senha'],
             'cpf'=>$_POST['cpf'],
-            'ra'=>$_POST['ra'],
-            'dtnascimento'=>$_POST['dtnascimento'],
-            'nivel'=>$_POST['nivel'],
+            'ra_aluno'=>$_POST['ra_aluno'],
+            'data_nascimento'=>$_POST['data_nascimento'],
+            'tipo_usuario'=>$_POST['tipo_usuario'],
             'situacao'=>$_POST['situacao']
         ];
 

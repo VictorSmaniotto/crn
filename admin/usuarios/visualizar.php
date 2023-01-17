@@ -33,12 +33,6 @@ include_once CABECALHO;
             </td>
         </tr>
         <tr>
-            <th width="100">Token</th>
-            <td>
-                <?=$usuarios['token']?>
-            </td>
-        </tr>
-        <tr>
             <th width="100">CPF</th>
             <td>
                 <?=$usuarios['cpf']?>
@@ -47,7 +41,7 @@ include_once CABECALHO;
         <tr>
             <th width="100">RA</th>
             <td>
-                <?=$usuarios['ra']?>
+                <?=$usuarios['ra_aluno']?>
             </td>
         </tr>
         <tr>
@@ -59,19 +53,19 @@ include_once CABECALHO;
         <tr>
             <th width="100">Data de Nascimento</th>
             <td>
-                <?=$usuarios['dtnascimento']?>
+                <?=$usuarios['data_nascimento']?>
             </td>
         </tr>
         <tr>
             <th width="100">Data de Cadastro</th>
             <td>
-                <?=$usuarios['dtcadastro']?>
+                <?=$usuarios['data_cadastro']?>
             </td>
         </tr>
         <tr>
-            <th width="100">Nível</th>
+            <th width="100">Tipo</th>
             <td>
-                <?=$usuarios['nivel']?>
+                <?=$usuarios['tipo_usuario']?>
             </td>
         </tr>
         <tr>
