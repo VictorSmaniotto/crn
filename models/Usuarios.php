@@ -37,8 +37,8 @@ function buscarUsuario($id){
 
 function cadastrarUsuario($usuario){
     $db = conexao();
-    $sql = "INSERT INTO usuarios (id, nome, email, senha, cpf, ra_aluno, data_nascimento, data_cadastro, tipo_usuario, situacao)
-                        VALUES(null,:nome, :email, :senha, :cpf, :ra_aluno, :data_nascimento, curdate(), :tipo_usuario, :situacao)";
+    $sql = "INSERT INTO usuarios (id, nome, email, senha, cpf, ra_aluno, data_nascimento, tipo_usuario, situacao)
+                        VALUES(null,:nome, :email, :senha, :cpf, :ra_aluno, :data_nascimento, :tipo_usuario, :situacao)";
 
     // $current_date = date("Y-m-d"); 
 
@@ -50,8 +50,8 @@ function cadastrarUsuario($usuario){
         $stmt->bindParam(':cpf', $usuario['cpf'], PDO::PARAM_STR);
         $stmt->bindParam(':ra_aluno', $usuario['ra_aluno'], PDO::PARAM_STR);
         $stmt->bindParam(':data_nascimento', $usuario['data_nascimento'], PDO::PARAM_STR);
-        $stmt->bindParam(':tipo_usuario', $usuario['tipo_usuario'], PDO::PARAM_STR);
-        $stmt->bindParam(':situacao', $usuario['situacao'], PDO::PARAM_STR);
+        $stmt->bindParam(':tipo_usuario', $usuario['tipo_usuario'], PDO::PARAM_INT);
+        $stmt->bindParam(':situacao', $usuario['situacao'], PDO::PARAM_INT);
         $stmt->execute();
 
         return true;

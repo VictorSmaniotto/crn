@@ -33,20 +33,18 @@ include_once CABECALHO;
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Email</th>
-                            <th scope="col">CPF</th>
-                            <th scope="col">RA</th>
+                            
                             <th scope="col" width="140" class="text-center">Ação</th>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- Linha do Registro -->
                         <?php foreach($usuarios as $user) : ?>
-                        <tr>
+                        <tr class="align-middle">
                             <th scope="row"><?= $user['id']?></th>
                             <td><?= $user['nome']?></td>
                             <td><?=$user['email']?> </td>
-                            <td><?=$user['cpf']?></td>
-                            <td><?=$user['ra_aluno']?> </td>
+                            
                             <td class="text-center">
                                 <a class="btn btn-sm btn-light" href="/admin/usuarios/visualizar?id=<?=$user['id']?>">
                                     <i class="fas fa-eye"></i>

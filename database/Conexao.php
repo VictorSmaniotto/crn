@@ -11,7 +11,7 @@ function conexao()
     $host = "localhost";
     $banco = "chronos";
     $usuario = "root";
-    $senha = "";
+    $senha = "senac2023";
 
     try {
 

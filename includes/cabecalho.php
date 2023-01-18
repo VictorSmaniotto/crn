@@ -11,7 +11,7 @@
   </head>
   <body class="bg-light">
     <header class="container-fluid shadow-sm">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-sm ">
             <div class="container-fluid">
                 <a href="index.php" class="navbar-brand">
                     <img src="/assets/img/logoChronos.png" class="d-inline-block mt-2"  width="160" alt="Logo Chronos">
