@@ -8,7 +8,7 @@ include_once CABECALHO;
 
 <main class="container">
     <h1 class="text-primary text-center mt-5">Projeto Chronos</h1>
-    <p>Página em Desenvolvimento...</p>
+    <p>Página em Desenvolvimento... por Lais</p>
 
 <div class="row">
 
