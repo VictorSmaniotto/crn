@@ -9,7 +9,7 @@ require_once BANCO_DE_DADOS;
 function listarProjetos(){
     $db = conexao();
 
-    $sql = "SELECT * FROM projeto";
+    $sql = "SELECT * FROM projetos";
 
     try {
         $stmt = $db->prepare($sql);
@@ -29,7 +29,7 @@ function listarProjetos(){
 function buscarProjeto($id){
     $db = conexao();
 
-    $sql = "SELECT * FROM projeto WHERE id=:id";
+    $sql = "SELECT * FROM projetos WHERE id=:id";
 
     try {
         $stmt = $db->prepare($sql);
@@ -45,7 +45,7 @@ function buscarProjeto($id){
 function CadastrarProjeto($projeto){
     $db = conexao();
 
-    $sql = "INSERT INTO projeto (id, nome,descricao,titulo,subtitulo,dtinicio,dtfinal,dtultimaalteracao,status, idgrupo, idsubcategoria)
+    $sql = "INSERT INTO projetos (id, nome,descricao,titulo,subtitulo,dtinicio,dtfinal,dtultimaalteracao,status, idgrupo, idsubcategoria)
                     VALUES(null, :nome, :descricao, :titulo, :subtitulo, curdate(), :dtfinal, curdate(), :status, idgrupo, idsubcategoria)";
 
     try {
